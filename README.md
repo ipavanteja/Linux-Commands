@@ -137,10 +137,12 @@
   ```
   **12. Type the `ls -t` command to list files or directories and sort by `last modified date` in descending order (biggest to smallest).**<br/>
     - You can also add a `-r` flag to reverse the sorting order like so: `ls -tr`<br/>
+    
   **13. Type the `ls -S` (the S is uppercase) command to list files or directories and sort by `size in descending order` (biggest to smallest).**<br/>
-    - You can also add a `-r` flag to reverse the sorting order like so: `ls -Sr`,br/>
+    - You can also add a `-r` flag to reverse the sorting order like so: `ls -Sr`<br/>
+    
   **14. Type the `ls > [File_Name].txt` command to print the output of the preceding command into an `File_Name.txt` file.**<br/>
-    - You can use the file as you see fit, or log the contents of the file with `cat File_Name.txt`.<br/>
+    - You can use the file as you see fit, or log the contents of the file with `cat File_Name.txt`<br/>
   ```
   teja@LAPTOP:Users/Teja$ ls > file.txt
   teja@LAPTOP:Users/Teja$ cat file.txt
