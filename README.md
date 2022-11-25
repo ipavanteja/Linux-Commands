@@ -9,6 +9,9 @@
   $ pwd
   ```
   ### Example:
+  ```
+  teja@LAPTOP:Users/Pavan Teja$ pwd
+  Users/Pavan Teja
 - ## cd
   
   `cd` stands for **Change Directory**.<br/>
