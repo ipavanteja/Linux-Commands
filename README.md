@@ -1,2 +1,1 @@
-<h1 align='center'>Linux Commands</h1>
--man -
+<h1 align="center">Linux Commands</h1>
