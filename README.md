@@ -3,7 +3,7 @@
 |1. [pwd](#pwd) |
 | :---: |
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+[![logo](https://img.shields.io/badge/Pavan-Teja-green)](https://pavan432.github.io/form-validation/)
 
 - ## pwd
 
