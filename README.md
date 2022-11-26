@@ -1,5 +1,10 @@
 <h1 align="center">Linux Commands</h1>
 
+|1. [pwd](#pwd) |
+| :---: |
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+
 - ## pwd
 
   - `pwd` stands for **Print Working Director**.<br/>
