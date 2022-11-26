@@ -1,9 +1,12 @@
 <h1 align="center">Linux Commands</h1>
+<h2 align="center">Commands</h2>
 
-|1. [pwd](#pwd) |
-| :---: |
-
-[![logo](https://img.shields.io/badge/Pavan-Teja-green)](https://pavan432.github.io/form-validation/)
+<p align="center">
+  
+  Navigate to the command which you want to learn
+  | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [ls](#ls) |
+  | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+</p>
 
 - ## pwd
 
@@ -18,6 +21,7 @@
   teja@LAPTOP:Users/Teja$ pwd
   Users/Teja
   ```
+  [⬆ Go to Top](#commands)
 - ## cd
   
   - `cd` stands for **Change Directory**.<br/>
@@ -77,7 +81,9 @@
   teja@LAPTOP:Users/Teja$ cd "App Data"
   teja@LAPTOP:Users/Teja/App Data$
   ```
-  - We can use single quotes insted of double quotes, `cd 'App Data'`
+  - We can use single quotes insted of double quotes, `cd 'App Data'`<br/>
+  
+  [⬆ Go to Top](#commands)
 - ## ls
   - `ls` command is known for list files or directories which are present in a directory.<br/>
   ### Syntax:
@@ -159,6 +165,8 @@
   Videos
   Downloads
   ```
+  [⬆ Go to Top](#commands)
+
   
   
   
