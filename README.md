@@ -3,13 +3,10 @@
 [Linux](https://www.linux.org/) is a open-source Unix operating systems based on the Linux Kernel. The Linux commands are useful for operating the Linux operating system. All basic and advanced tasks can be done by executing commands. The commands are executed on the Linux terminal, It’s similar to the Command Prompt application in Windows. Keep in mind that all Linux commands are case-sensitive. 
 
 <h2 align="center">Commands</h2>
-
-<p align="center">
   
   Navigate to the command that you want to learn
-  | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [ls](#ls) |
+  | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [mkdir](#mkdir) | [rm](#rm) | [rmdir](#rmdir) | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [ls](#ls) |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-</p>
 
 - ## pwd
 
@@ -171,7 +168,7 @@
   ```
   [⬆ Go to Top](#commands)
 
-- ## makdir
+- ## mkdir
   - mkdir command is used to create new directories.<br/>
   - This command can create multiple directories at once as well as set the permissions for the directories.<br/>
   ### Syntax:
@@ -186,8 +183,15 @@
   teja@LAPTOP:Users/Teja/Games$ ls
   Action     Adventure
   ```
-  - We can create multiple directories in single time `mkdir [Dir1] [Dir2] [Dir3]`
+  - `-v` flag will prints a message for each created directory.
+  ```
+  $ mkdir -v [Directory_Name]
+  ```
+  - We can create multiple directories at a time by `mkdir [Dir1] [Dir2] [Dir3]`
   - We can create sub-directories also by using `-p` flag.
+  ```
+  $ mkdir -p [dir1_nanme/dir2_name/dir3_name]
+  ```
   
   ```
   teja@LAPTOP:Users/Teja$ mkdir -p dir1/dir2/dir3
@@ -200,8 +204,120 @@
   teja@LAPTOP:Users/Teja/dir1/dir2$ ls
   dir3
   ```
+  - `-m` sets the file permissions. For instance, to create a directory with full read, write, and execute permissions for all users.
+  ```
+  $ mkdir -m777 [directory_name]
+  ```
+  [⬆ Go to Top](#commands)
   
+- ## rm
+  - `rm` command is used to delete files and folders(directories).
+  ### Syntax:
+  ```
+  $ rm [File or Directory]
+  ```
+  #### Example:
+  ```
+  teja@LAPTOP:Users/Teja$ ls
+  file1.txt      file2.txt     file3.txt
+  teja@LAPTOP:Users/Teja$ rm file1.txt
+  teja@LAPTOP:Users/Teja$ ls
+  file2.txt     file3.txt
+  ```
+  - `-i` option makes the command ask the user for confirmation before removing each file. `rm -i file1.txt`.
+  - `-f` (force deletion) option overrides `write protected` and removes the file forcefully.
+  - We can delete multiple files at a time by `rm file1.txt file2.txt file3.txt`.
+  - Deleting directories -
+  - `-d` option will remove empty directories.
+  ```
+  $ rm -d [Directory_Name]
+  ```
+  - `-d` option can't delete non-empty directories.
+  - `-r` option removes all the files and sub-directories (non-empty directories) in the parent directory.
+  ```
+  teja@LAPTOP:Users/Teja$ ls
+  Desktop       Music       Games
+  teja@LAPTOP:Users/Teja$ rm -r Games
+  teja@LAPTOP:Users/Teja$ ls
+  Desktop       Music
+  ```
+  [⬆ Go to Top](#commands)
+  
+- ## rmdir
+  - `rmdir` command is used to delete an empty directory permanently.
+  ### Syntax:
+  ```
+  $ rmdir [Directory_Name]
+  ```
+  #### Example:
+  ```
+  teja@LAPTOP:Users/Teja$ ls
+  Desktop       Music       Games
+  teja@LAPTOP:Users/Teja$ rmdir Games
+  teja@LAPTOP:Users/Teja$ ls
+  Desktop       Music
+  ```
+  - `rmdir` can't delete a directory if it's not empty. For that we have to use [rm -r](#rm) command.
+  - `-p` works for deleting a subdirectory and its parent directory.
+  ```
+  $ rmdir -p /Directory/SubDirectory
+  ```
+  - `-v` option will print a text as a confirmation that the specified directory has been deleted.
+  
+  [⬆ Go to Top](#commands)
+
+- ## touch
+   - `touch` command is used to create empty files, change modify the timestamps of files or folders.
+   ### Syntax:
+   ```
+   $ touch [File_Name]
+   ```
+   #### Example:
+   ```
+   teja@LAPTOP:Users/Teja$ ls
+   teja@LAPTOP:Users/Teja$ touch file.txt
+   teja@LAPTOP:Users/Teja$ ls
+   file.txt
+   ```
+   - We can create `multiple files` at a time by `touch file1.txt file2.txt file3.txt`.
+   - You can `auto generate file` names using curl braces while creating multiple files like in the following example:
+   ```
+   $ touch file_name{1..3}.txt
+   $ ls
+   file_name1.txt    file_name2.txt    file_name3.txt
+   ```
+   - `-a` option will change the `access time` of a file to the current time.
+   ```
+   $ stat file.txt
+   Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    teja)   Gid: ( 1000/    teja)
+   Access: 2022-11-27 16:55:19.142152800 +0530
+   Modify: 2022-11-27 16:53:31.937936000 +0530
+   Change: 2022-11-27 16:55:18.013885600 +0530
+   $ touch -a file.txt
+   Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    teja)   Gid: ( 1000/    teja)
+   Access: 2022-11-27 17:00:19.142152800 +0530
+   Modify: 2022-11-27 16:53:31.937936000 +0530
+   Change: 2022-11-27 17:00:18.013885600 +0530
+   ```
+   - `-m` option will change the `modification time only`. This will update last modification time.
+   ```
+   $ touch -m [File_Name]
+   ```
+   ```
+   $ stat file.txt
+   Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    teja)   Gid: ( 1000/    teja)
+   Access: 2022-11-27 17:00:19.142152800 +0530
+   Modify: 2022-11-27 16:53:31.937936000 +0530
+   Change: 2022-11-27 17:00:18.013885600 +0530
    
+   $ touch -m file.txt
+   Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    teja)   Gid: ( 1000/    teja)
+   Access: 2022-11-27 17:15:25.142152800 +0530
+   Modify: 2022-11-27 17:15:25.937936000 +0530
+   Change: 2022-11-27 17:15:25.013885600 +0530
+   ```
+   - `-am` option will change the both `access time` and `modification time`.
+   - 
   
   
   
