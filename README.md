@@ -409,7 +409,7 @@
   - `>>` will write in an existing file. The terminal will wait for the input text and stores at the end.
   ```
   $ cat >> file.txt
-  Newly added text
+  Newly added text 
   ```
   [⬆ Go to Top](#commands)
   
