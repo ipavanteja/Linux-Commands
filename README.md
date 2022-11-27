@@ -5,7 +5,7 @@
 <h2 align="center">Commands</h2>
   
   Navigate to the command that you want to learn
-  | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [mkdir](#mkdir) | [rm](#rm) | [rmdir](#rmdir) | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [ls](#ls) |
+  | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [mkdir](#mkdir) | [rm](#rm) | [rmdir](#rmdir) | [touch](#touch) | [cat](#cat) | []() | []() |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 
 - ## pwd
@@ -280,7 +280,7 @@
    file.txt
    ```
    - We can create `multiple files` at a time by `touch file1.txt file2.txt file3.txt`.
-   - You can `auto generate file` names using curl braces while creating multiple files like in the following example:
+   - We can `auto generate file` names using curl braces while creating multiple files like in the following example:
    ```
    $ touch file_name{1..3}.txt
    $ ls
@@ -288,12 +288,12 @@
    ```
    - `-a` option will change the `access time` of a file to the current time.
    ```
-   $ stat file.txt
+   @teja$ stat file.txt
    Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    teja)   Gid: ( 1000/    teja)
    Access: 2022-11-27 16:55:19.142152800 +0530
    Modify: 2022-11-27 16:53:31.937936000 +0530
    Change: 2022-11-27 16:55:18.013885600 +0530
-   $ touch -a file.txt
+   @teja$ touch -a file.txt
    Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    teja)   Gid: ( 1000/    teja)
    Access: 2022-11-27 17:00:19.142152800 +0530
    Modify: 2022-11-27 16:53:31.937936000 +0530
@@ -304,21 +304,126 @@
    $ touch -m [File_Name]
    ```
    ```
-   $ stat file.txt
+   @teja$ stat file.txt
    Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    teja)   Gid: ( 1000/    teja)
    Access: 2022-11-27 17:00:19.142152800 +0530
    Modify: 2022-11-27 16:53:31.937936000 +0530
    Change: 2022-11-27 17:00:18.013885600 +0530
    
-   $ touch -m file.txt
+   @teja$ touch -m file.txt
    Access: (0777/-rwxrwxrwx)  Uid: ( 1000/    teja)   Gid: ( 1000/    teja)
    Access: 2022-11-27 17:15:25.142152800 +0530
    Modify: 2022-11-27 17:15:25.937936000 +0530
    Change: 2022-11-27 17:15:25.013885600 +0530
    ```
    - `-am` option will change the both `access time` and `modification time`.
-   - 
+   - `-r` option is used to use the `timestamp` of `another file`. Which means, It will set the access and modification time of a file by reading the timestamp information from another file.
+   ```
+   $ touch -r [reference_file_name] [file_name] 
+   ```
+   - `-d` option is used to specify `date and time` as a string.
+   ```
+   @teja$ touch -d '28 feb' file.txt
+   @teja$ ls -l
+   -rwxrwxrwx 1 teja teja      0 Feb 28  2022  file.txt
+   ```
+   - Instead of date we can specify time. This will update current date.
+   ```
+   @teja$ touch -d '10:30' file.txt
+   @teja$ ls -l
+   -rwxrwxrwx 1 teja teja      0 Nov 27  10:30  file.txt
+   ```
+   - `-t` option can update both `date and time` that we mention in a specified format.
+   ```
+   $ touch -t YYMMDDHHMM [file_name]
+   ```
+   ```
+   @teja$ touch -t 200202281030 file.txt
+   @teja$ ls -l
+   -rwxrwxrwx 1 teja teja      0 Feb 28  2002  file.txt
+   ```
+   [⬆ Go to Top](#commands)
+- ## cat
+  - `cat` command is uesd to `display the content` of a file. It helps us to `create`, `view`, `concatenate` files.
+  ### Syntax:
+  ```
+  $ cat [option] [file_name]
+  ```
+  #### Example:
+  ```
+  @teja$ ls
+  file.txt
+  @teja$ cat file.txt
+  Welcome to Linux Commands
+  ```
+  - We can open multiple files by `cat file1.txt file2.txt file3.txt`. This will display the information of all three files.
+  - `-n` will display the contents of a file preceding with line numbers.
+  ```
+  @teja$ cat -n file.txt
+  1 Hello
+  2 How are you
+  3 Good to see you
+  ```
+  - `>` option will create a file. The terminal will wait for the input text and stores in that file.
+  ```
+  @teja$ cat > file.txt
+  
+  ```
+  - It will copy the contents of one file to another file.
+  ```
+  $ cat [filename-whose-contents-is-to-be-copied] > [destination-filename]
+  ```
+  - It will append the contents of one file to the end of another file.
+  ```
+  $ cat file1 >> file2
+  ```
+  - `tac` will display the content in reverse order.
+  ```
+  @teja$ tac file.txt
+  olleH
+  ```
+  - `-E` option will highlight the end of line.
+  ```
+  @teja$ cat -E file.txt
+  Hello$
+  How are you$
+  Good to see you$
+  ```
+  - `--` option will open dashed files. 
+  ```
+  $ cat -- "-dashfile"
+  ```
+  - If the file has a `lot of content` and can’t fit in the terminal.
+  - `| more` will help.
+  ```
+  $ cat file.txt | more
+  ```
+  - It will merge the contents of multiple files. 
+  ```
+  $ cat "filename1" "filename2" "filename3" > "merged_filename"
+  ```
+  - `*.txt` option will display all the text files in the folder.
+  ```
+  $ cat *.txt
+  ```
+  - `>>` will write in an existing file. The terminal will wait for the input text and stores at the end.
+  ```
+  $ cat >> file.txt
+  Newly added text
+  ```
+  [⬆ Go to Top](#commands)
   
   
   
   
+
+
+
+
+
+
+
+
+
+
+
