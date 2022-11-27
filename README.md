@@ -1,9 +1,12 @@
 <h1 align="center">Linux Commands</h1>
+
+[Linux](https://www.linux.org/) is a open-source Unix operating systems based on the Linux Kernel. The Linux commands are useful for operating the Linux operating system. All basic and advanced tasks can be done by executing commands. The commands are executed on the Linux terminal, It’s similar to the Command Prompt application in Windows. Keep in mind that all Linux commands are case-sensitive. 
+
 <h2 align="center">Commands</h2>
 
 <p align="center">
   
-  Navigate to the command which you want to learn
+  Navigate to the command that you want to learn
   | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [ls](#ls) |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 </p>
@@ -126,7 +129,8 @@
   drwxrwxrwx 1 teja teja    4096 Nov 27  2021  Games
   drwxrwxrwx 1 teja teja    4096 Nov 19 22:24  Videos
   ```
-  **10. Type the `ls -lh` command to list the files or directories in the same table format above, but with another column representing the `size of each file/directory`.**
+  **10. Type the `ls -lh` command to list the files or directories in the same table format above, but with another column representing the `size of each
+  file/directory`.**
   ```
   teja@LAPTOP:Users/Teja$ ls -lh
   drwxrwxrwx 1 teja teja 4.0K Nov 25 14:51  Desktop
@@ -167,8 +171,37 @@
   ```
   [⬆ Go to Top](#commands)
 
+- ## makdir
+  - mkdir command is used to create new directories.<br/>
+  - This command can create multiple directories at once as well as set the permissions for the directories.<br/>
+  ### Syntax:
+  ```
+  $ mkdir [Directory_Name]
+  ```
+  #### Example:
+  ```
+  teja@LAPTOP:Users/Teja/Games$ ls
+  Action
+  teja@LAPTOP:Users/Teja/Games$ mkdir Adventure
+  teja@LAPTOP:Users/Teja/Games$ ls
+  Action     Adventure
+  ```
+  - We can create multiple directories in single time `mkdir [Dir1] [Dir2] [Dir3]`
+  - We can create sub-directories also by using `-p` flag.
   
+  ```
+  teja@LAPTOP:Users/Teja$ mkdir -p dir1/dir2/dir3
+  teja@LAPTOP:Users/Teja$ ls
+  dir1
+  teja@LAPTOP:Users/Teja$ cd dir1
+  teja@LAPTOP:Users/Teja/dir1$ ls
+  dir2
+  teja@LAPTOP:Users/Teja/dir1$ cd dir2
+  teja@LAPTOP:Users/Teja/dir1/dir2$ ls
+  dir3
+  ```
   
+   
   
   
   
