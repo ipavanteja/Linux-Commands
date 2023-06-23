@@ -4,7 +4,7 @@
 
 <h2 align="center">Commands</h2>
   
-  Navigate to the command that you want to learn
+  Navigate to the command that you want to learn.
   | [pwd](#pwd) | [cd](#cd) | [ls](#ls) | [mkdir](#mkdir) | [rm](#rm) | [rmdir](#rmdir) | [touch](#touch) | [cat](#cat) | []() | []() |
   | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 
