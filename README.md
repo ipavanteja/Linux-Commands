@@ -1,6 +1,6 @@
 <h1 align="center">Linux Commands</h1>
 
-[Linux](https://www.linux.org/) is a open-source Unix operating systems based on the Linux Kernel. The Linux commands are useful for operating the Linux operating system. All basic and advanced tasks can be done by executing commands. The commands are executed on the Linux terminal, It’s similar to the Command Prompt application in Windows. Keep in mind that all Linux commands are case-sensitive. 
+[Linux](https://www.linux.org/) is an open-source Unix operating system based on the Linux Kernel. The Linux commands are useful for operating the Linux operating system. All basic and advanced tasks can be done by executing commands. The commands are executed on the Linux terminal, It’s similar to the Command Prompt application in Windows. Keep in mind that all Linux commands are case-sensitive. 
 
 <h2 align="center">Commands</h2>
   
@@ -27,7 +27,7 @@
   - `cd` stands for **Change Directory**.<br/>
   - Used to change the current working directory. We can move all over our directories in our system.<br/>
   
-   **1. To navigate to a directory from root directory -**
+   **1. To navigate to a directory from the root directory -**
   ```
   $ cd [/Root_Name/Destination_Path]
   ```
@@ -35,7 +35,7 @@
   teja@LAPTOP:/mnt/c$ cd /mnt/c/Users/Teja
   teja@LAPTOP:/mnt/c/Users/Teja$
   ```
-  **2. To navigate to next directory(sub directory) -**
+  **2. To navigate to next directory(sub-directory) -**
   ```
   $ cd [SubDirectory_Name]
   ```
@@ -43,7 +43,7 @@
     teja@LAPTOP:Users/Teja$ cd Desktop
     teja@LAPTOP:Users/Teja/Desktop$
     ```
-  **3. To navigate to previous directory(parent directory of current directory) -**
+  **3. To navigate to the previous directory(the parent directory of the current directory) -**
   ```
   $ cd ..
   ```
@@ -51,7 +51,7 @@
   teja@LAPTOP:Users/Teja/Desktop$ cd ..
   teja@LAPTOP:Users/Teja$
   ```
-  **4. To navigate to root directory -**<br/>
+  **4. To navigate to the root directory -**<br/>
   - The root directory is the first directory in our filesystem.
   ```
   $ cd /
@@ -60,7 +60,7 @@
   teja@LAPTOP:Users/Teja/Desktop$ cd /
   teja@LAPTOP:/$
   ```
-  **5. To navigate to home directory -**
+  **5. To navigate to the home directory -**
   ```
   $ cd ~
   ```
@@ -71,9 +71,9 @@
   ```
   $ cd
   ```
-  - This above command is also work as `cd ~` <br/>
+  - This above command also works as `cd ~` <br/>
   
-  **6. To navigate to a directory with spaces in directory name -**
+  **6. To navigate to a directory with spaces in the directory name -**
   ```
   $ cd ["Dictory_Name"]
   ```
@@ -81,11 +81,11 @@
   teja@LAPTOP:Users/Teja$ cd "App Data"
   teja@LAPTOP:Users/Teja/App Data$
   ```
-  - We can use single quotes insted of double quotes, `cd 'App Data'`<br/>
+  - We can use single quotes instead of double quotes, `cd 'App Data'`<br/>
   
   [⬆ Go to Top](#commands)
 - ## ls
-  - `ls` command is known for list files or directories which are present in a directory.<br/>
+  - `ls` command is known for listing files or directories which are present in a directory.<br/>
   ### Syntax:
   ```
   $ ls
@@ -96,10 +96,10 @@
   ```
   teja@LAPTOP:Users/Teja$ ls
   Desktop       Music       Games
-  Documents     Picturies   Videos
+  Documents     Pictures   Videos
   Downloads   
   ```
-  **2. List files in the another working directory -**
+  **2. List files in another working directory -**
   
   ### Syntax:
   ``` 
@@ -111,9 +111,9 @@
   ```
   **3. Type the `ls /` command to list the contents of the `root directory`.**<br/>
   **4. Type the `ls ..` command to list the contents of the `parent directory` one level above. Use `ls ../..` for contents two levels above.**<br/>
-  **5. Type the `ls ~` command to list the contents in the users's `home directory`.**<br/>
+  **5. Type the `ls ~` command to list the contents in the users' `home directory`.**<br/>
   **6. Type the `ls -d */` command to list `only directories`.**<br/>
-  **7. Type the `ls *` command to list the contents of the `directory` with it's `subdirectories`.**<br/>
+  **7. Type the `ls *` command to list the contents of the `directory` with its `subdirectories`.**<br/>
   **8. Type the `ls -s` command (the s is lowercase) to list files or directories with their `sizes`.**<br/>
   **9. Type the `ls -l` command to list the contents of the directory in a `table format` with `columns including`.**<br/>
   ```
@@ -138,7 +138,7 @@
   drwxrwxrwx 1 teja teja 4.0K Nov 27  2021  Games
   drwxrwxrwx 1 teja teja 4.0K Nov 19 22:24  Videos
   ```
-  **11. Type the `ls -a` command to list files or directories including `hidden files or directories`. In Linux, anything that begins with a `.`is considered a `hidden   file`**<br/>
+  **11. Type the `ls -a` command to list files or directories including `hidden files or directories'. In Linux, anything that begins with a `.`is considered a `hidden   file`**<br/>
   ```
   teja@LAPTOP:Users/Teja$ ls -a
   .bash_history        Desktop      Music       Games
@@ -162,7 +162,7 @@
   Music
   Games
   Documents
-  Picturies
+  Pictures
   Videos
   Downloads
   ```
@@ -267,7 +267,7 @@
   [⬆ Go to Top](#commands)
 
 - ## touch
-   - `touch` command is used to create empty files, change modify the timestamps of files or folders.
+   - `touch` command is used to create empty files, and change the timestamps of files or folders.
    ### Syntax:
    ```
    $ touch [File_Name]
@@ -280,7 +280,7 @@
    file.txt
    ```
    - We can create `multiple files` at a time by `touch file1.txt file2.txt file3.txt`.
-   - We can `auto generate file` names using curl braces while creating multiple files like in the following example:
+   - We can `auto-generate file` names using curl braces while creating multiple files like in the following example:
    ```
    $ touch file_name{1..3}.txt
    $ ls
@@ -299,7 +299,7 @@
    Modify: 2022-11-27 16:53:31.937936000 +0530
    Change: 2022-11-27 17:00:18.013885600 +0530
    ```
-   - `-m` option will change the `modification time only`. This will update last modification time.
+   - `-m` option will change the `modification time only`. This will update the last modification time.
    ```
    $ touch -m [File_Name]
    ```
@@ -317,7 +317,7 @@
    Change: 2022-11-27 17:15:25.013885600 +0530
    ```
    - `-am` option will change the both `access time` and `modification time`.
-   - `-r` option is used to use the `timestamp` of `another file`. Which means, It will set the access and modification time of a file by reading the timestamp information from another file.
+   - `-r` option is used to use the `timestamp` of `another file`. This means It will set the access and modification time of a file by reading the timestamp information from another file.
    ```
    $ touch -r [reference_file_name] [file_name] 
    ```
@@ -327,13 +327,13 @@
    @teja$ ls -l
    -rwxrwxrwx 1 teja teja      0 Feb 28  2022  file.txt
    ```
-   - Instead of date we can specify time. This will update current date.
+   - Instead of date we can specify time. This will update the current date.
    ```
    @teja$ touch -d '10:30' file.txt
    @teja$ ls -l
    -rwxrwxrwx 1 teja teja      0 Nov 27  10:30  file.txt
    ```
-   - `-t` option can update both `date and time` that we mention in a specified format.
+   - `-t` option can update both the `date and time` that we mention in a specified format.
    ```
    $ touch -t YYMMDDHHMM [file_name]
    ```
@@ -344,7 +344,7 @@
    ```
    [⬆ Go to Top](#commands)
 - ## cat
-  - `cat` command is uesd to `display the content` of a file. It helps us to `create`, `view`, `concatenate` files.
+  - `cat` command is used to `display the content` of a file. It helps us to `create`, `view`, `and 'concatenate` files.
   ### Syntax:
   ```
   $ cat [option] [file_name]
@@ -357,14 +357,14 @@
   Welcome to Linux Commands
   ```
   - We can open multiple files by `cat file1.txt file2.txt file3.txt`. This will display the information of all three files.
-  - `-n` will display the contents of a file preceding with line numbers.
+  - `-n` will display the contents of a file preceding line numbers.
   ```
   @teja$ cat -n file.txt
   1 Hello
   2 How are you
   3 Good to see you
   ```
-  - `>` option will create a file. The terminal will wait for the input text and stores in that file.
+  - `>` option will create a file. The terminal will wait for the input text and store it in that file.
   ```
   @teja$ cat > file.txt
   
@@ -382,7 +382,7 @@
   @teja$ tac file.txt
   olleH
   ```
-  - `-E` option will highlight the end of line.
+  - `-E` option will highlight the end of the line.
   ```
   @teja$ cat -E file.txt
   Hello$
@@ -406,7 +406,7 @@
   ```
   $ cat *.txt
   ```
-  - `>>` will write in an existing file. The terminal will wait for the input text and stores at the end.
+  - `>>` will write in an existing file. The terminal will wait for the input text and store it at the end.
   ```
   $ cat >> file.txt
   Newly added text 
